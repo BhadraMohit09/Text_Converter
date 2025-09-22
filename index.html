@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +44,7 @@
             flex-direction: column;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-
+        
         /* --- Loading Screen --- */
         .loader-wrapper {
             position: fixed;
@@ -84,14 +83,14 @@
             cursor: pointer;
             animation: float 25s infinite linear;
             transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(13, 110, 253, 0.5);
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(13, 110, 253, 0.5);
         }
-
+        
         .bubble.popped {
             transform: scale(1.2);
             opacity: 0;
         }
-
+        
         #loader-text {
             color: var(--primary-color);
             font-family: 'Poppins', sans-serif;
@@ -102,25 +101,13 @@
         }
 
         @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(-120vh);
-            }
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-120vh); }
         }
-
+        
         @keyframes fadeInText {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
 
 
@@ -130,27 +117,16 @@
             transform: translateY(-20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-
         .navbar {
             background-color: var(--primary-color);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .navbar-brand {
-            font-weight: 600;
-            color: #fff;
-            letter-spacing: 1px;
-        }
-
-        .navbar-brand i {
-            color: #fff;
-        }
+        .navbar-brand { font-weight: 600; color: #fff; letter-spacing: 1px; }
+        .navbar-brand i { color: #fff; }
 
         /* --- Main Content & Simple Card --- */
-        main {
-            flex: 1;
-        }
-
+        main { flex: 1; }
         .main-card {
             background-color: var(--card-bg-color);
             border-radius: 1rem;
@@ -162,37 +138,24 @@
         }
 
         /* --- Form Elements --- */
-        .form-control,
-        .form-select {
+        .form-control, .form-select {
             background-color: var(--input-bg);
             border: 1px solid var(--input-border);
             color: var(--text-color);
             border-radius: 0.5rem;
             transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
         }
-
-        .form-control:focus,
-        .form-select:focus {
+        
+        .form-control:focus, .form-select:focus {
             background-color: var(--input-bg);
             color: var(--text-color);
             border-color: #86b7fe;
             box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
         }
-
-        .form-control::placeholder {
-            color: #888;
-        }
-
-        textarea.form-control {
-            min-height: 220px;
-            resize: vertical;
-        }
-
-        #textStats {
-            color: var(--muted-color);
-            font-size: 0.85rem;
-            transition: color 0.3s ease;
-        }
+        
+        .form-control::placeholder { color: #888; }
+        textarea.form-control { min-height: 220px; resize: vertical; }
+        #textStats { color: var(--muted-color); font-size: 0.85rem; transition: color 0.3s ease; }
 
         /* --- Custom Dropdown --- */
         .dropdown-toggle {
@@ -200,69 +163,37 @@
             border: 1px solid var(--input-border);
             color: var(--text-color);
         }
-
-        .dropdown-toggle:hover {
-            border-color: #a3c9ff;
-        }
-
-        .dropdown-toggle:focus,
-        .dropdown-toggle.show {
+        .dropdown-toggle:hover { border-color: #a3c9ff; }
+        .dropdown-toggle:focus, .dropdown-toggle.show {
             border-color: #86b7fe;
             box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
             background-color: var(--input-bg) !important;
             color: var(--text-color) !important;
         }
-
         .dropdown-menu {
             background-color: var(--card-bg-color);
             border-radius: 0.5rem;
             border: 1px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
-        .dropdown-item {
-            color: var(--text-color);
-            padding: 0.5rem 1rem;
-        }
-
-        .dropdown-item:hover {
-            background-color: rgba(13, 110, 253, 0.1);
-        }
-
-        .dropdown-item:active {
-            background-color: var(--primary-color);
-            color: #fff;
-        }
+        .dropdown-item { color: var(--text-color); padding: 0.5rem 1rem; }
+        .dropdown-item:hover { background-color: rgba(13, 110, 253, 0.1); }
+        .dropdown-item:active { background-color: var(--primary-color); color: #fff; }
 
         /* --- Buttons --- */
-        .btn-primary,
-        .btn-outline-primary,
-        .btn-outline-danger,
-        .btn-outline-secondary,
-        .btn-outline-success {
+        .btn-primary, .btn-outline-primary, .btn-outline-danger, .btn-outline-secondary, .btn-outline-success {
             font-weight: 500;
             transition: all 0.3s ease;
         }
-
-        .btn:hover,
-        .btn:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-primary:hover,
-        .btn-primary:focus {
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
-        }
-
+        .btn:hover, .btn:focus { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+        .btn-primary:hover, .btn-primary:focus { box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3); }
+        
         /* --- Mobile Button Grid Fix --- */
-        .action-btn-grid>div {
+        .action-btn-grid > div {
             display: flex;
         }
-
         .action-btn-grid .btn {
-            flex-grow: 1;
-            /* Make buttons in the same row equal height */
+            flex-grow: 1; /* Make buttons in the same row equal height */
         }
 
         /* --- Output Preview Area --- */
@@ -290,48 +221,25 @@
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease, border-color 0.3s ease;
         }
-
-        footer .social-icons a {
-            color: var(--muted-color);
-            font-size: 1.2rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        footer .social-icons a:hover {
-            color: var(--primary-color);
-            transform: scale(1.1);
-        }
+        footer .social-icons a { color: var(--muted-color); font-size: 1.2rem; transition: color 0.3s ease, transform 0.3s ease; }
+        footer .social-icons a:hover { color: var(--primary-color); transform: scale(1.1); }
 
         /* --- Smooth Load-in Animations --- */
-        body.loaded header,
-        body.loaded .main-card,
-        body.loaded footer {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        body.loaded .main-card {
-            transition-delay: 0.2s;
-        }
-
-        body.loaded footer {
-            transition-delay: 0.4s;
-        }
+        body.loaded header, body.loaded .main-card, body.loaded footer { opacity: 1; transform: translateY(0); }
+        body.loaded .main-card { transition-delay: 0.2s; }
+        body.loaded footer { transition-delay: 0.4s; }
 
         /* --- Mobile Friendliness --- */
         @media (max-width: 576px) {
             .card-title {
                 font-size: 1.6rem;
             }
-
             .main-card {
                 padding: 1.5rem !important;
             }
-
             textarea.form-control {
                 min-height: 200px;
             }
-
             #loader-text {
                 font-size: 1.2rem;
                 padding: 0 1rem;
@@ -340,9 +248,8 @@
         }
     </style>
 </head>
-
 <body>
-
+    
     <!-- Loading Screen -->
     <div id="loader" class="loader-wrapper">
         <div id="bubble-container"></div>
@@ -366,45 +273,29 @@
                     <div class="card main-card p-3 p-md-5">
                         <div class="card-body">
                             <h2 class="card-title text-center mb-4 text-primary">Convert Your Text Instantly</h2>
-
+                            
                             <div class="row g-4">
                                 <!-- Left Side: Input & Actions -->
                                 <div class="col-lg-7">
                                     <div class="mb-3">
-                                        <label for="textInput" class="form-label fw-medium">Enter or paste your text
-                                            below:</label>
-                                        <textarea class="form-control" id="textInput" rows="10"
-                                            placeholder="Type, paste, or upload text here..."></textarea>
-                                        <div id="textStats" class="form-text text-end mt-2">Characters: 0 | Words: 0 |
-                                            Lines: 0</div>
+                                        <label for="textInput" class="form-label fw-medium">Enter or paste your text below:</label>
+                                        <textarea class="form-control" id="textInput" rows="10" placeholder="Type, paste, or upload text here..."></textarea>
+                                        <div id="textStats" class="form-text text-end mt-2">Characters: 0 | Words: 0 | Lines: 0</div>
                                     </div>
                                     <div class="d-grid gap-2 d-sm-flex mb-3">
-                                        <button class="btn btn-outline-primary" id="uploadBtn"><i
-                                                class="bi bi-upload"></i> Upload</button>
-                                        <button class="btn btn-outline-danger" id="clearBtn"><i
-                                                class="bi bi-x-circle"></i> Clear</button>
+                                        <button class="btn btn-outline-primary" id="uploadBtn"><i class="bi bi-upload"></i> Upload</button>
+                                        <button class="btn btn-outline-danger" id="clearBtn"><i class="bi bi-x-circle"></i> Clear</button>
                                         <input type="file" id="fileInput" accept=".txt,.csv" hidden>
                                     </div>
                                     <div class="row g-2 action-btn-grid">
-                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary"
-                                                id="upperCaseBtn">UPPER</button></div>
-                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary"
-                                                id="lowerCaseBtn">lower</button></div>
-                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary"
-                                                id="sentenceCaseBtn">Sentence</button></div>
-                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary"
-                                                id="titleCaseBtn">Title</button></div>
-                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary"
-                                                id="removeSpacesBtn"><i class="bi bi-text-paragraph"></i> Clean
-                                                Spaces</button></div>
-                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary"
-                                                id="removeLinesBtn"><i class="bi bi-arrows-collapse"></i> Remove
-                                                Lines</button></div>
-                                        <div class="col-12"><button class="btn btn-sm btn-outline-secondary"
-                                                data-bs-toggle="modal" data-bs-target="#findReplaceModal"><i
-                                                    class="bi bi-search"></i> Find & Replace</button></div>
-                                        <div class="col-12"><button class="btn btn-sm btn-outline-success"
-                                                id="copyBtn"><i class="bi bi-clipboard"></i> Copy Text</button></div>
+                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary" id="upperCaseBtn">UPPER</button></div>
+                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary" id="lowerCaseBtn">lower</button></div>
+                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary" id="sentenceCaseBtn">Sentence</button></div>
+                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary" id="titleCaseBtn">Title</button></div>
+                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary" id="removeSpacesBtn"><i class="bi bi-text-paragraph"></i> Clean Spaces</button></div>
+                                        <div class="col-6"><button class="btn btn-sm btn-outline-secondary" id="removeLinesBtn"><i class="bi bi-arrows-collapse"></i> Remove Lines</button></div>
+                                        <div class="col-12"><button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#findReplaceModal"><i class="bi bi-search"></i> Find & Replace</button></div>
+                                        <div class="col-12"><button class="btn btn-sm btn-outline-success" id="copyBtn"><i class="bi bi-clipboard"></i> Copy Text</button></div>
                                     </div>
                                 </div>
 
@@ -414,18 +305,12 @@
                                     <div class="mb-3">
                                         <label for="formatDropdown" class="form-label fw-medium">Convert To:</label>
                                         <div class="dropdown">
-                                            <button class="btn dropdown-toggle w-100" type="button" id="formatDropdown"
-                                                data-bs-toggle="dropdown" aria-expanded="false">PDF Document
-                                                (.pdf)</button>
+                                            <button class="btn dropdown-toggle w-100" type="button" id="formatDropdown" data-bs-toggle="dropdown" aria-expanded="false">PDF Document (.pdf)</button>
                                             <ul class="dropdown-menu w-100" aria-labelledby="formatDropdown">
-                                                <li><a class="dropdown-item" href="#" data-value="pdf">PDF Document
-                                                        (.pdf)</a></li>
-                                                <li><a class="dropdown-item" href="#" data-value="csv">CSV File
-                                                        (.csv)</a></li>
-                                                <li><a class="dropdown-item" href="#" data-value="txt">Text File
-                                                        (.txt)</a></li>
-                                                <li><a class="dropdown-item" href="#" data-value="json">JSON Array
-                                                        (.json)</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="pdf">PDF Document (.pdf)</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="csv">CSV File (.csv)</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="txt">Text File (.txt)</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="json">JSON Array (.json)</a></li>
                                             </ul>
                                         </div>
                                         <input type="hidden" id="selectedFormat" value="pdf">
@@ -433,12 +318,10 @@
 
                                     <div class="mb-3">
                                         <label for="previewArea" class="form-label fw-medium">Live Preview:</label>
-                                        <div id="previewArea" class="p-3"><span class="text-muted">Preview will appear
-                                                here...</span></div>
+                                        <div id="previewArea" class="p-3"><span class="text-muted">Preview will appear here...</span></div>
                                     </div>
 
-                                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="convertBtn"
-                                            disabled><i class="bi bi-download"></i> Convert & Download</button></div>
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="convertBtn" disabled><i class="bi bi-download"></i> Convert & Download</button></div>
                                 </div>
                             </div>
                         </div>
@@ -453,19 +336,15 @@
         <div class="container">
             <p class="mb-1 text-muted">Convert with MBTech</p>
             <div class="social-icons">
-                <a href="https://github.com/BhadraMohit09" target="_blank" rel="noopener noreferrer" class="me-3"><i
-                        class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/bhadramohit27" target="blank" rel="noopener noreferrer"
-                    class="me-3"><i class="bi bi-linkedin"></i></a>
-                <a href="https://x.com/Bhadra26" target="_blank" rel="noopener noreferrer"><i
-                        class="bi bi-twitter-x"></i></a>
+                <a href="https://github.com/BhadraMohit09" target="_blank" rel="noopener noreferrer" class="me-3"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/bhadramohit27" target="blank" rel="noopener noreferrer" class="me-3"><i class="bi bi-linkedin"></i></a>
+                <a href="https://x.com/Bhadra26" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
             </div>
         </div>
     </footer>
-
+    
     <!-- Find and Replace Modal -->
-    <div class="modal fade" id="findReplaceModal" tabindex="-1" aria-labelledby="findReplaceModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="findReplaceModal" tabindex="-1" aria-labelledby="findReplaceModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -502,7 +381,7 @@
         const bubbleContainer = document.getElementById('bubble-container');
         const loaderText = document.getElementById('loader-text');
         let bubblesPopped = 0;
-
+        
 
         function hideLoader() {
             loader.classList.add('hidden');
@@ -511,10 +390,10 @@
 
         function popBubble(bubble) {
             if (bubble.classList.contains('popped')) return;
-
+            
             bubble.classList.add('popped');
             bubblesPopped++;
-
+            
             // Optional: Add a subtle pop sound effect
             // new Audio('path/to/pop.mp3').play();
             const totalBubbles = window.innerWidth < 768 ? 10 : 15;
@@ -529,7 +408,7 @@
             for (let i = 0; i < totalBubbles; i++) {
                 const bubble = document.createElement('div');
                 bubble.classList.add('bubble');
-
+                
                 const size = Math.random() * 60 + 20; // 20px to 80px
                 bubble.style.width = `${size}px`;
                 bubble.style.height = `${size}px`;
@@ -542,10 +421,10 @@
                 bubbleContainer.appendChild(bubble);
             }
         }
-
+        
         // --- App Logic ---
         document.addEventListener('DOMContentLoaded', function () {
-
+            
             // --- Animated Favicon Logic ---
             function animateFavicon() {
                 const canvas = document.createElement('canvas');
@@ -566,14 +445,14 @@
                     context.arc(size / 2, size / 2, radius, 0, 2 * Math.PI);
                     context.fillStyle = `rgba(13, 110, 253, ${alpha})`;
                     context.fill();
-
+                    
                     faviconLink.href = canvas.toDataURL('image/png');
                     frame++;
                 }
                 setInterval(draw, 100);
             }
             animateFavicon();
-
+            
             // Setup loader on DOM ready
             setupBubbleLoader();
 
@@ -612,7 +491,7 @@
             sentenceCaseBtn.addEventListener('click', toSentenceCase);
             titleCaseBtn.addEventListener('click', toTitleCase);
             dropdownItems.forEach(item => {
-                item.addEventListener('click', function (e) {
+                item.addEventListener('click', function(e) {
                     e.preventDefault();
                     formatDropdownBtn.textContent = this.textContent;
                     selectedFormatInput.value = this.dataset.value;
@@ -622,7 +501,7 @@
             replaceAllBtn.addEventListener('click', handleReplaceAll);
             removeSpacesBtn.addEventListener('click', removeExtraSpaces);
             removeLinesBtn.addEventListener('click', removeLineBreaks);
-
+            
             // --- Core Functions ---
             function handleTextInput() {
                 const text = textInput.value;
@@ -664,8 +543,8 @@
                     case 'json':
                         try {
                             const lines = text.split('\n').filter(line => line.trim() !== '');
-                            previewContent = JSON.stringify(lines.slice(0, 5), null, 2);
-                            if (lines.length > 5) previewContent += '\n...';
+                            previewContent = JSON.stringify(lines.slice(0,5), null, 2);
+                            if(lines.length > 5) previewContent += '\n...';
                         } catch (e) { previewContent = 'Error generating JSON preview.'; }
                         break;
                     default: previewContent = previewLines + (text.split('\n').length > 10 ? '\n...' : ''); break;
@@ -689,7 +568,7 @@
                     default: downloadBlob(text, `${filename}.txt`, 'text/plain;charset=utf-8;'); break;
                 }
             }
-
+            
             function toUpperCase() { textInput.value = textInput.value.toUpperCase(); handleTextInput(); }
             function toLowerCase() { textInput.value = textInput.value.toLowerCase(); handleTextInput(); }
             function toSentenceCase() {
@@ -729,12 +608,12 @@
                 findInput.value = '';
                 replaceInput.value = '';
             }
-
+            
             function removeExtraSpaces() {
                 textInput.value = textInput.value.trim().replace(/\s\s+/g, ' ');
                 handleTextInput();
             }
-
+            
             function removeLineBreaks() {
                 textInput.value = textInput.value.replace(/(\r\n|\n|\r)/gm, " ").trim().replace(/\s\s+/g, ' ');
                 handleTextInput();
@@ -772,5 +651,5 @@
     </script>
 
 </body>
-
 </html>
+
