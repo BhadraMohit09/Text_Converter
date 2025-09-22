@@ -517,7 +517,7 @@
 
             // Optional: Add a subtle pop sound effect
             // new Audio('path/to/pop.mp3').play();
-            const totalBubbles = window.innerWidth < 768 ? 5 : 10;
+            const totalBubbles = window.innerWidth < 768 ? 7 : 15;
             if (bubblesPopped >= totalBubbles) {
                 loaderText.textContent = "Great job!";
                 setTimeout(hideLoader, 500);
@@ -525,7 +525,7 @@
         }
 
         function setupBubbleLoader() {
-            const totalBubbles = window.innerWidth < 768 ? 10 : 15;
+            const totalBubbles = window.innerWidth < 768 ? 7 : 15;
             for (let i = 0; i < totalBubbles; i++) {
                 const bubble = document.createElement('div');
                 bubble.classList.add('bubble');
