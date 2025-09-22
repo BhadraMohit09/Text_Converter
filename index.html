@@ -547,33 +547,33 @@
         // --- App Logic ---
         document.addEventListener('DOMContentLoaded', function () {
 
-            // --- Animated Favicon Logic ---
-            function animateFavicon() {
-                const canvas = document.createElement('canvas');
-                const size = 32;
-                canvas.width = size;
-                canvas.height = size;
-                const context = canvas.getContext('2d');
-                const faviconLink = document.getElementById('favicon');
-                let frame = 0;
+            // // --- Animated Favicon Logic ---
+            // function animateFavicon() {
+            //     const canvas = document.createElement('canvas');
+            //     const size = 32;
+            //     canvas.width = size;
+            //     canvas.height = size;
+            //     const context = canvas.getContext('2d');
+            //     const faviconLink = document.getElementById('favicon');
+            //     let frame = 0;
 
-                function draw() {
-                    context.clearRect(0, 0, size, size);
-                    const pulse = Math.abs(Math.sin(frame * 0.1));
-                    const radius = 6 + pulse * 3;
-                    const alpha = 0.5 + pulse * 0.5;
+            //     function draw() {
+            //         context.clearRect(0, 0, size, size);
+            //         const pulse = Math.abs(Math.sin(frame * 0.1));
+            //         const radius = 6 + pulse * 3;
+            //         const alpha = 0.5 + pulse * 0.5;
 
-                    context.beginPath();
-                    context.arc(size / 2, size / 2, radius, 0, 2 * Math.PI);
-                    context.fillStyle = `rgba(13, 110, 253, ${alpha})`;
-                    context.fill();
+            //         context.beginPath();
+            //         context.arc(size / 2, size / 2, radius, 0, 2 * Math.PI);
+            //         context.fillStyle = `rgba(13, 110, 253, ${alpha})`;
+            //         context.fill();
 
-                    faviconLink.href = canvas.toDataURL('image/png');
-                    frame++;
-                }
-                setInterval(draw, 100);
-            }
-            animateFavicon();
+            //         faviconLink.href = canvas.toDataURL('image/png');
+            //         frame++;
+            //     }
+            //     setInterval(draw, 100);
+            // }
+            // animateFavicon();
 
             // Setup loader on DOM ready
             setupBubbleLoader();
