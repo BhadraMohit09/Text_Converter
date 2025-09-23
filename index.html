@@ -743,7 +743,7 @@
 
             function generatePdf(text, filename) {
                 try {
-                    const { jsPDF } = window.jspdf;
+                    const jsPDF = window.jspdf.jsPDF;
                     const doc = new jsPDF();
                     doc.setFont('Helvetica', 'normal');
                     doc.setFontSize(11);
@@ -759,7 +759,8 @@
             }
 
             function downloadBlob(content, filename, contentType) {
-                const blob = new Blob([content], { type: contentType });
+                // Add BOM for UTF-8 to improve Excel/Notepad compatibility
+                const blob = new Blob(['\uFEFF' + content], { type: contentType });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
@@ -769,6 +770,7 @@
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
             }
+
         });
     </script>
 
